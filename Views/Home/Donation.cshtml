@@ -1,0 +1,40 @@
+﻿@model{IEnumerable<U19106832_HW04.Models.DocModel>
+
+@{ 
+    ViewBag.Title = "Donation";
+}
+<h2>CUSTOMER INFORMATION</h2>
+
+@using (Html.BeginForm("Donation","Home",FormMethod.Post))
+{
+<div class="form-group">
+    <label for="fName">Name:</label>
+    <textarea class="form-control" id="fname" name="Fname" rows="3"></textarea>
+</div>
+<div class="form-group">
+    <label for="SName">Surname:</label>
+    <textarea class="form-control" id="sname" name="Sname" rows="3"></textarea>
+</div>
+<div class="form-group">
+    <label for="TEvent">Typeof condition:</label>
+    <textarea class="form-control" id="tcondition" name="Tcondition" rows="3"></textarea>
+</div>
+<div class="form-group">
+    <label for="ADonated">Amount Donated</label>
+    <input type="number" min="0" max="500000" class="form-control" name="adonated" id="adonated">
+</div>
+<div class="form-group">
+    <label for="Comp">Company Name</label>
+    <textarea class="form-control" id="cname" name="CName" rows="3"></textarea>
+</div>
+
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+}
+@section Scripts {
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Add/add.js")" asp-append-version="true"></script>
+
+}
+

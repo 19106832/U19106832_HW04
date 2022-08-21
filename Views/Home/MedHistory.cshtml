@@ -1,0 +1,44 @@
+﻿@model{IEnumerable<U19106832_HW04.Models.DocModel>
+
+@{
+    ViewBag.Title = "Medical History";
+}
+<h2>CUSTOMER INFORMATION</h2>
+
+@using (Html.BeginForm("MedHistory", "Home", FormMethod.Post))
+{
+                   <table>
+                       <div class="form-group">
+                           <th class="fName">Name:</th>
+                           <textarea class="form-control" id="fname" name="Fname" rows="3"></textarea>
+                       </div>
+                       <div class="form-group">
+                           <th class="SName">Surname:</th>
+                           <textarea class="form-control" id="sname" name="Sname" rows="3"></textarea>
+                       </div>
+                       <div class="form-group">
+                           <th class="TEvent">Type of Event:</th>
+                           <textarea class="form-control" id="tevent" name="Tevent" rows="3"></textarea>
+                       </div>
+                       <div class="form-group">
+                           <th class ="ADonation">Amount</th>
+                           <input type="number" min="0" max="500" class="form-control" name="adonated" id="adonated">
+                       </div>
+                       <div class="form-group">
+                           <th class ="Comp">Company Name</th>
+                           <textarea class="form-control" id="cname" name="CName" rows="3"></textarea>
+                       </div>
+                       <div class="form-group">
+                           <th class ="Date">Date</th>
+                           <DateTime class="form-control" id="date" name="date"></DateTime>
+                       </div>
+                   </table>
+
+    
+
+}
+@section Scripts {
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Add/add.js")" asp-append-version="true"></script>
+
+}
